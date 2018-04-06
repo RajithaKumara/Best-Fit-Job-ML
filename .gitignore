@@ -1,0 +1,13 @@
+venv
+*.pyc
+staticfiles
+.env
+db.sqlite3
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

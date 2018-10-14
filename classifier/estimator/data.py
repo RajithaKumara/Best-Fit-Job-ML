@@ -1,5 +1,10 @@
-TRAIN_URL = "http://<domain name>/<path to csv>/model_training.csv"
-TEST_URL = "http://<domain name>/<path to csv>/model_test.csv"
+import os
+
+domain_name = os.environ['DOMAIN_NAME']
+path_to_csv = os.environ['CSV_FILES_PATH']
+
+TRAIN_URL = "http://" + domain_name + "/" + path_to_csv + "/model_training.csv"
+TEST_URL = "http://" + domain_name + "/" + path_to_csv + "/model_test.csv"
 
 CSV_COLUMN_NAMES = [
     'Attribute1',

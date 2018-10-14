@@ -1,6 +1,8 @@
 
 # Best-Fit-Job-ML
 
+[![Build Status](https://travis-ci.org/RajithaKumara/Best-Fit-Job-ML.svg?branch=master)](https://travis-ci.org/RajithaKumara/Best-Fit-Job-ML)
+
 > This is Machine Learning part of [Best-Fit-Job](https://github.com/RajithaKumara/Best-Fit-Job) project. Best-Fit-Job makes a platform for job seekers to find jobs and employers to offer jobs easily. In order to fulfil this task, this system has portals for job seekers and people who offer jobs. Job seekers are able to add their knowledge, skills, attitudes and other extra attributes to their account. On the other hand, employers can add their job opportunities with expected skills. The output of this system is matching job opportunities with job seekers profiles and sending notifications to both parties.
 
 ## Prerequisites

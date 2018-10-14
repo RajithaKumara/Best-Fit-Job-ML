@@ -1,0 +1,41 @@
+sudo: required
+dist: trusty
+
+language: python
+python:
+  - "3.6"
+  - "3.6-dev"  # 3.6 development branch
+
+before_install:
+  - sudo chmod 777 -R build
+  - ./build/travis/before_install.sh
+
+install:
+  - ./build/travis/install.sh
+
+before_script:
+  - ./build/travis/before_script.sh
+
+script:
+  - ./build/travis/test_script.sh
+
+after_failure:
+  - ./build/travis/after_failure.sh
+
+after_success:
+  - ./build/travis/after_success.sh
+
+after_script:
+  - ./build/travis/after_script.sh
+
+jobs:
+  include:
+    - stage: deploy
+      install: skip
+      script: ./build/travis/deploy_script.sh
+      deploy:
+        provider: heroku
+        api_key: $HEROKU_API_KEY
+        app: $HEROKU_APP
+        run:
+          - restart
